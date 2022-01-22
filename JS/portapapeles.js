@@ -3,9 +3,12 @@ var btnCopiar = document.querySelector("#btn-copy")
 
 //agrego gestión de evento a boton copiar con fun. anonima
 btnCopiar.addEventListener("click",function(event){
+    
     event.preventDefault();
     copiaAPortapapeles(); //llamo funcion de copia PortaPapeles
-
+    // como retardar ejecución de una función 
+    //https://www.sitepoint.com/delay-sleep-pause-wait/
+    setTimeout(()=>{limpiezaMsgOut();},1500);
 });
 
 
@@ -13,20 +16,17 @@ btnCopiar.addEventListener("click",function(event){
 
 function copiaAPortapapeles() {
 
-    // var msgEnClaro = document.getElementById("msg");
-    // var leePortapapeles = navigator.clipboard.readText();
-    // var escribePortapapeles = navigator.clipboard.writeText();
-
-    //document.getElementById('textArea');
     var contenidoMsg = document.getElementById("msg");
-    
     contenidoMsg.select();
+    setTimeout(2000);
     document.execCommand("copy");
-    //alert("copiado!")
+}
 
+function limpiezaMsgOut(){
+    var mensajeENCDESOut = document.querySelector("#msg");
+    mensajeENCDESOut.value = "";//pongo valor de la input-text en cadena vacia (eso limpia la pantalla..)
 }
 
 
 
 
-//https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
