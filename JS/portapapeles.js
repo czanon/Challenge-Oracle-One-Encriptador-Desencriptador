@@ -18,7 +18,6 @@ function copiaAPortapapeles() {
 
     var contenidoMsg = document.getElementById("msg");
     contenidoMsg.select();
-    setTimeout(2000);
     document.execCommand("copy");
 }
 
