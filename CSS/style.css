@@ -50,6 +50,7 @@ body {
   padding: 0.5em;
   width: 100%;
   height: 60px; /* altura del textbox */
+  text-transform: lowercase; /* limita a que todo el texto en el textbox sea siempre minuscolo...*/
 }
 
 #autorChallenge{

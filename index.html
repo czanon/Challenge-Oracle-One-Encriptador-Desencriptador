@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
         <label for="input-texto">Solo letras minúsculas, sin acento</label>
         <br>
         <br>
-        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <input onkeypress="return /[a-z ]/i.test(event.key)" class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
         <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
         <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
       </form>
